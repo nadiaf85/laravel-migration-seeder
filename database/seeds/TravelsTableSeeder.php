@@ -15,15 +15,15 @@ class TravelsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         for ($i=0; $i < 10; $i++) { 
-            $package = new Package();
-            $package -> package_name = $faker -> word();
-            $package -> location = $faker -> word();
-            $package -> price = $faker -> word();
-            $package -> discount = $faker -> numberBetween(0, 50);
-            $package -> air_company = $faker -> word();
-            $package -> departure = $faker -> dateTime();
-            $package -> arrival = $faker -> dateTime();
-            $package -> save();
+            $travel = new Travel();
+            $travel -> package_name = $faker -> word();
+            $travel -> location = $faker -> word();
+            $travel -> price = $faker->randomDigit();
+            $travel -> discount = $faker -> numberBetween(0, 50);
+            $travel -> air_company = $faker -> word();
+            $travel -> departure = $faker -> dateTime();
+            $travel -> arrival = $faker -> dateTime();
+            $travel -> save();
         }
     }
 }

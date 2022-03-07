@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+
+    @dump($list_travel);
     
-    @dump('travels');
 </body>
 </html>
